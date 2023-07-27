@@ -34,7 +34,9 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  flutter_svg: ^0.17.4 # it helps us to use SVG
+  # flutter_svgを最新版に変更することでhome_screen.dartでのSvgPictureが適応されないバクの修正
+  # 基本的に最新版に変更するのがいいのかも
+  flutter_svg: ^2.0.7 # it helps us to use SVG
 
 dev_dependencies:
   flutter_test:

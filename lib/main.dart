@@ -17,10 +17,15 @@ class MyApp extends StatelessWidget {
       title: 'Plant App',
       theme: ThemeData(
         scaffoldBackgroundColor: kBackgroundColor,
-        colorScheme: ColorScheme.fromSeed(seedColor: kPrimaryColor),
+        // primaryColor: kPrimaryColor,
+        // primarycolorだと色が変わらない -> colorShemeのprimaryで変更できた
+        // [参考文献](https://stackoverflow.com/questions/69169306/flutter-themedata-primary-color-not-changing-from-theme-when-trying-to-add-a-pri)
+        colorScheme: const ColorScheme.light(
+          primary: kPrimaryColor,
+        ),
         textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        useMaterial3: true,
+        // useMaterial3: true,
       ),
       home: const HomeScreen(),
     );
