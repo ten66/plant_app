@@ -11,7 +11,6 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Column(
       // <Widget>はつけなくてもいいのかも
-      // children: <Widget>[]
       // It will cover 20% of our total height
       // 全体の高さの20％をカバーする
       children: [
@@ -27,6 +26,44 @@ class Body extends StatelessWidget {
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(36),
                     bottomRight: Radius.circular(36),
+                  ),
+                ),
+              ),
+              // Positioned Widget - Stackの中でWidgetを配置する
+              // https://www.youtube.com/watch?v=EgtPleVwxBQ
+              Positioned(
+                bottom: 0,
+                left: 0,
+                right: 0,
+                child: Container(
+                  alignment: Alignment.center,
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                  height: 54,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        // 影の位置？
+                        offset: const Offset(0, 5),
+                        // 影のぼかし
+                        blurRadius: 50,
+                        color: kPrimaryColor.withOpacity(0.23),
+                      )
+                    ],
+                  ),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: "Search",
+                      hintStyle: TextStyle(
+                        color: kPrimaryColor.withOpacity(0.5),
+                      ),
+                      enabledBorder: InputBorder.none,
+                      focusedBorder: InputBorder.none,
+                    ),
                   ),
                 ),
               ),
