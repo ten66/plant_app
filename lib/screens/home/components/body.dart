@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:plant_app/constants.dart';
 
 class Body extends StatelessWidget {
@@ -36,6 +37,7 @@ class Body extends StatelessWidget {
                 left: 0,
                 right: 0,
                 child: Container(
+                  // Searchテキストを中央に
                   alignment: Alignment.center,
                   margin:
                       const EdgeInsets.symmetric(horizontal: kDefaultPadding),
@@ -55,15 +57,26 @@ class Body extends StatelessWidget {
                       )
                     ],
                   ),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: "Search",
-                      hintStyle: TextStyle(
-                        color: kPrimaryColor.withOpacity(0.5),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: TextField(
+                          onChanged: (value) {},
+                          decoration: InputDecoration(
+                            hintText: "Search",
+                            hintStyle: TextStyle(
+                              color: kPrimaryColor.withOpacity(0.5),
+                            ),
+                            enabledBorder: InputBorder.none,
+                            focusedBorder: InputBorder.none,
+                            // suffix isn't working properly with SVG
+                            // thats why we use row
+                            // suffixIcon: SvgPicture.asset("assets/icons/search.svg"),
+                          ),
+                        ),
                       ),
-                      enabledBorder: InputBorder.none,
-                      focusedBorder: InputBorder.none,
-                    ),
+                      SvgPicture.asset("assets/icons/search.svg"),
+                    ],
                   ),
                 ),
               ),
