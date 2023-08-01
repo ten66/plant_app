@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'image_and_icons.dart';
+import 'title_and_price.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -10,6 +11,11 @@ class Body extends StatelessWidget {
     return Column(
       children: [
         ImageAndIcons(size: size),
+        const TitleAndPrice(
+          title: 'Angelica',
+          country: 'Russia',
+          price: 440,
+        ),
       ],
     );
   }
