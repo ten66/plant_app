@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:plant_app/constants.dart';
 
+import 'icon_card.dart';
+
 class Body extends StatelessWidget {
   const Body({super.key});
 
@@ -33,6 +35,10 @@ class Body extends StatelessWidget {
                         ),
                       ),
                       const Spacer(),
+                      const IconCard(icon: 'assets/icons/sun.svg'),
+                      const IconCard(icon: 'assets/icons/icon_2.svg'),
+                      const IconCard(icon: 'assets/icons/icon_3.svg'),
+                      const IconCard(icon: 'assets/icons/icon_4.svg'),
                     ],
                   ),
                 ),
