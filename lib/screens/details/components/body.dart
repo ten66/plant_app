@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/constants.dart';
-
-import 'header_with_searchbox.dart';
-import 'title_with_more_btn.dart';
-import 'recomend_plants.dart';
-import 'featured_plants.dart';
+import 'buynow_and_description_btn.dart';
+import 'image_and_icons.dart';
+import 'title_and_price.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -15,12 +13,10 @@ class Body extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          HeaderWithSearchBox(size: size),
-          TitleWithMoreBtn(title: 'Recomended', press: () {}),
-          const RecomendsPlants(),
-          TitleWithMoreBtn(title: 'Featured Plants', press: () {}),
-          const FeaturedPlants(),
+          ImageAndIcons(size: size),
+          const TitleAndPrice(title: 'Angelica', country: 'Russia', price: 440),
           const SizedBox(height: kDefaultPadding),
+          BuyNowAndDescriptionBtn(size: size),
         ],
       ),
     );

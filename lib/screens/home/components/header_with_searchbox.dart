@@ -15,9 +15,6 @@ class HeaderWithSearchBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(bottom: kDefaultPadding * 2.5),
-      // <Widget>はつけなくてもいいのかも
-      // It will cover 20% of our total height
-      // 全体の高さの20％をカバーする
       height: size.height * 0.2,
       child: Stack(
         children: [
@@ -27,7 +24,6 @@ class HeaderWithSearchBox extends StatelessWidget {
               right: kDefaultPadding,
               bottom: 36 + kDefaultPadding,
             ),
-            // -27はあくまで微調整
             height: size.height * 0.2 - 27,
             decoration: const BoxDecoration(
               color: kPrimaryColor,
@@ -50,14 +46,11 @@ class HeaderWithSearchBox extends StatelessWidget {
               ],
             ),
           ),
-          // Positioned Widget - Stackの中でWidgetを配置する
-          // https://www.youtube.com/watch?v=EgtPleVwxBQ
           Positioned(
             bottom: 0,
             left: 0,
             right: 0,
             child: Container(
-              // Searchテキストを中央に
               alignment: Alignment.center,
               margin: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
               padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
@@ -67,9 +60,7 @@ class HeaderWithSearchBox extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
                 boxShadow: [
                   BoxShadow(
-                    // 影の位置？
                     offset: const Offset(0, 5),
-                    // 影のぼかし
                     blurRadius: 50,
                     color: kPrimaryColor.withOpacity(0.23),
                   )
@@ -87,9 +78,6 @@ class HeaderWithSearchBox extends StatelessWidget {
                         ),
                         enabledBorder: InputBorder.none,
                         focusedBorder: InputBorder.none,
-                        // suffix isn't working properly with SVG
-                        // thats why we use row
-                        // suffixIcon: SvgPicture.asset("assets/icons/search.svg"),
                       ),
                     ),
                   ),

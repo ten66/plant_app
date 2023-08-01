@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/screens/details/details_screen.dart';
 
 import '../../../constants.dart';
 
@@ -10,7 +11,6 @@ class RecomendsPlants extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      // 横スクロール
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
@@ -19,21 +19,42 @@ class RecomendsPlants extends StatelessWidget {
             title: 'Samantha',
             country: 'Russia',
             price: 440,
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const DetailsScreen(),
+                ),
+              );
+            },
           ),
           RecomendPlantCard(
             image: 'assets/images/image_2.png',
             title: 'Angelica',
             country: 'Russia',
             price: 440,
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const DetailsScreen(),
+                ),
+              );
+            },
           ),
           RecomendPlantCard(
             image: 'assets/images/image_3.png',
             title: 'Samantha',
             country: 'Russia',
             price: 440,
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const DetailsScreen(),
+                ),
+              );
+            },
           ),
         ],
       ),
