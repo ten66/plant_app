@@ -11,7 +11,6 @@ class RecomendsPlants extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      // 横スクロール
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
