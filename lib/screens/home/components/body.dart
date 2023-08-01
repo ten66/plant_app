@@ -27,6 +27,7 @@ class Body extends StatelessWidget {
           // it will cover 40% of our total width
           // 全幅の40％をカバーする
           const RecomendsPlants(),
+          TitleWithMoreBtn(title: 'Featured Plants', press: () {}),
         ],
       ),
     );
