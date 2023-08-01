@@ -29,7 +29,7 @@ class Body extends StatelessWidget {
           // 全幅の40％をカバーする
           const RecomendsPlants(),
           TitleWithMoreBtn(title: 'Featured Plants', press: () {}),
-          FeaturedPlants(),
+          const FeaturedPlants(),
           const SizedBox(height: kDefaultPadding),
         ],
       ),
