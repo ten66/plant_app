@@ -28,9 +28,13 @@ class Body extends StatelessWidget {
           // 全幅の40％をカバーする
           const RecomendsPlants(),
           TitleWithMoreBtn(title: 'Featured Plants', press: () {}),
-          FeaturePlantCard(
-            image: 'assets/images/bottom_img_1.png',
-            press: () {},
+          Row(
+            children: [
+              FeaturePlantCard(
+                image: 'assets/images/bottom_img_1.png',
+                press: () {},
+              ),
+            ],
           ),
         ],
       ),
@@ -64,6 +68,7 @@ class FeaturePlantCard extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           image: DecorationImage(
+            fit: BoxFit.cover,
             image: AssetImage(image),
           ),
         ),
